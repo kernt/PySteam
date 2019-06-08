@@ -1,15 +1,24 @@
-# PySteam :shipit:
+# PySteam
 
 Python interface for Steam Web Chat.
 
 Ported from [node-steamcommunity](https://github.com/DoctorMcKay/node-steamcommunity).
 Includes a port of [node-steamid](https://github.com/DoctorMcKay/node-steamid) as well.
+Steam APT DOC on [Steam_Web_API](https://partner.steamgames.com/doc/webapi_overview).
+Used some ideas from [steam-chat-bot](https://www.npmjs.com/package/steam-chat-bot).
+
+## Formats
+Formely i will udes Json.
+
+## Most importend method 
+* 
 
 ## Packages Required
 
     pip install requests pycryptodome pyee enum34 pyquery future munch
 
 `py.test` also needs to be installed for testing, if developing.
+
 `ipython` is used for interactivity in the examples.
 
 ## Usage
@@ -74,6 +83,7 @@ while status != steamapi.enums.LoginStatus.LoginSuccessful:
         captcha = input("CAPTCHA: ")
         status = steam.retry(captcha=captcha)
 ```
+
 (replace `input` with `raw_input` on Python 2)
 
 Status will be `SteamAPI.enums.LoginStatus.LoginSuccessful` once you have logged in.
